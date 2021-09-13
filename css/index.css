@@ -1,0 +1,1059 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?lewah4');
+    src: url('../fonts/icomoon.eot?lewah4#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?lewah4') format('truetype'), url('../fonts/icomoon.woff?lewah4') format('woff'), url('../fonts/icomoon.svg?lewah4#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+
+/* 把我们所有标签的内外边距清零 */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* css3盒子模型 */
+    box-sizing: border-box;
+}
+
+
+/* em 和 i 斜体的文字不倾斜 */
+
+em,
+i {
+    font-style: normal
+}
+
+
+/* 去掉li 的小圆点 */
+
+li {
+    list-style: none
+}
+
+img {
+    /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+    border: 0;
+    /* 取消图片底侧有空白缝隙的问题 */
+    vertical-align: middle
+}
+
+button {
+    /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
+    cursor: pointer
+}
+
+a {
+    color: #212121;
+    text-decoration: none
+}
+
+a:hover {
+    color: #fe801f
+}
+
+button,
+input {
+    /* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 默认有灰色边框我们需要手动去掉 */
+    border: 0;
+    outline: none;
+}
+
+body {
+    /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #fdfcfd;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    color: #666
+}
+
+.hide,
+.none {
+    display: none
+}
+
+
+/* 清除浮动 */
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+
+/* 版心 */
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 头部模块开始 */
+
+header {
+    height: 50px;
+    background-color: #22282e;
+}
+
+.logo {
+    float: left;
+    width: 112px;
+    height: 50px;
+}
+
+.logo a {
+    display: block;
+    width: 112px;
+    height: 50px;
+    font-size: 0;
+    background: url(../images/logo.png) no-repeat center center;
+}
+
+
+/* 注册和登录 */
+
+.register a,
+.sign a {
+    float: right;
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    line-height: 28px;
+    background-color: #22282e;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    margin: 10px 30px 0 0;
+}
+
+.register a:hover,
+.sign a:hover {
+    background-color: #fe801f;
+    border-color: #fe801f;
+}
+
+
+/* 头部模块结束 */
+
+
+/* 快捷导航模块开始 */
+
+.shortcut {
+    height: 50px;
+}
+
+.shortcut ul {
+    float: left;
+}
+
+.shortcut ul li {
+    position: relative;
+    float: left;
+    height: 50px;
+    font-size: 15px;
+    padding-right: 65px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.shortcut ul li:first-of-type a {
+    color: #fe801f;
+}
+
+
+/* 快捷导航下拉部分 */
+
+.dropdown {
+    position: absolute;
+    top: 43px;
+    left: 50%;
+    margin-left: -80px;
+    width: 100px;
+    background-color: #fff;
+    border-top: 2px solid #e9e9eb;
+    border-radius: 8px;
+    display: none;
+    z-index: 1;
+}
+
+.dropdown p {
+    font-size: 14px;
+    line-height: 35px;
+    color: #464748;
+}
+
+
+/* 第二个开始有下拉效果 */
+
+.shortcut ul li:nth-of-type(n+2):hover .dropdown {
+    display: block;
+}
+
+
+/* new图标定位 */
+
+.new1 {
+    position: absolute;
+    top: 1px;
+    right: 53px;
+}
+
+.new2 {
+    position: absolute;
+    top: 30px;
+    right: 5px;
+}
+
+.time {
+    float: right;
+}
+
+.vip {
+    margin: 0 65px 0 70px;
+}
+
+.download {
+    position: relative;
+    font-size: 15px;
+}
+
+
+/* APP下载 */
+
+.download img {
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    margin-left: -60px;
+    width: 120px;
+    height: 120px;
+    display: none;
+}
+
+.download:hover img {
+    display: block;
+}
+
+
+/* 快捷导航栏结束 */
+
+
+/* 中间导航模块开始 */
+
+.banner {
+    height: 400px;
+    background: #065fff url(../images/bg.jpg) no-repeat center;
+}
+
+.banner .w {
+    height: 400px;
+}
+
+
+/* 左侧导航栏模块 */
+
+.nav {
+    float: left;
+    height: 400px;
+    width: 180px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav ul li {
+    /* position: relative; */
+    width: 180px;
+    height: 40px;
+}
+
+.nav ul li a {
+    display: block;
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 40px;
+    padding-left: 18px;
+    transition: all 0.3s;
+}
+
+.nav ul li a::before {
+    position: relative;
+    top: 0;
+    left: 130px;
+    content: '\e920';
+    font-family: 'icomoon';
+    text-align: right;
+    display: none;
+    /* transition: all 0.3s; */
+}
+
+
+/* 鼠标经过的效果 */
+
+.nav ul li a:hover {
+    padding-left: 25px;
+    background-color: #fe801f;
+}
+
+.nav ul li a:hover::before {
+    display: inline-block;
+}
+
+.ba {
+    float: left;
+    width: 750px;
+    height: 400px;
+}
+
+.ba img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 右侧文章模块 */
+
+.article {
+    float: right;
+    width: 270px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.article_hd {
+    width: 270px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid #53648f;
+}
+
+.article_hd ul {
+    padding-left: 2px;
+}
+
+.article_hd ul li {
+    float: left;
+}
+
+.article_hd ul li a {
+    display: block;
+    height: 35px;
+    color: #53648f;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 16px;
+}
+
+
+/* 右侧标题模块经过的效果 */
+
+.article_hd ul li a:hover {
+    color: #fff;
+    border-bottom: 1px solid #fe801f;
+}
+
+.article_bd ul li {
+    height: 36px;
+    width: 270px;
+    line-height: 36px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fdfcfd;
+    padding-right: 10px;
+}
+
+.article_bd ul li a {
+    color: #fdfcfd;
+}
+
+.article_bd ul li::before {
+    content: '\e920';
+    font-family: 'icomoon';
+    color: #fdfcfd;
+    font-size: 1px;
+    padding: 0 10px;
+}
+
+.article_bd ul li a:hover {
+    color: #fe801f;
+}
+
+
+/* 鼠标经过文章,标题不知道为啥没有效果，是:hover有作用域吗？  */
+
+.article_bd ul li a:hover .wenzhang {
+    color: #fff;
+    border-bottom: 1px solid #fe801f;
+}
+
+
+/* 中间导航模块结束 */
+
+
+/* 推荐模块开始 */
+
+.rec {
+    height: 80px;
+    background-color: #191e26;
+}
+
+.rec .w {
+    height: 80px;
+}
+
+.rec .w ul li {
+    float: left;
+    width: 300px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.rec .w ul li a {
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 80px;
+    color: #fdfcfd;
+    font-size: 15px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.rec .w ul li a::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 63px;
+    width: 60px;
+    height: 60px;
+}
+
+.rec .w ul li a:hover {
+    background-color: #ff7901;
+}
+
+.rec .w ul li .bgicon1::before {
+    background: url(../images/bgicon1.png) no-repeat center;
+}
+
+.rec .w ul li .bgicon1:hover::before {
+    background: url(../images/bgicon1.gif) no-repeat center;
+}
+
+.rec .w ul li .bgicon2::before {
+    background: url(../images/bgicon2.png) no-repeat center;
+}
+
+.rec .w ul li .bgicon2:hover::before {
+    background: url(../images/bgicon2.gif) no-repeat center;
+}
+
+.rec .w ul li .bgicon3::before {
+    background: url(../images/bgicon3.png) no-repeat center;
+}
+
+.rec .w ul li .bgicon3:hover::before {
+    background: url(../images/bgicon3.gif) no-repeat center;
+}
+
+.rec .w ul li .bgicon4::before {
+    background: url(../images/bgicon4.png) no-repeat center;
+}
+
+.rec .w ul li .bgicon4:hover::before {
+    background: url(../images/bgicon4.gif) no-repeat center;
+}
+
+
+/* 推荐模块结束 */
+
+
+/* 主体模块(电梯楼)开始 */
+
+
+/* 集体声明 */
+
+.lab,
+.job,
+.course,
+.work,
+.teacher,
+.brand {
+    margin-top: 30px;
+}
+
+.lab_hd h3,
+.job_hd h3,
+.course_hd h3,
+.work_hd h3,
+.teacher_hd h3,
+.brand_hd h3 {
+    float: left;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #212121;
+    margin-left: 5px;
+}
+
+.lab_hd a,
+.job_hd a,
+.course_hd a {
+    float: right;
+    font-size: 13px;
+    color: #888888;
+    text-align: center;
+    line-height: 34px;
+}
+
+.lab_hd a::after {
+    content: '\e927';
+    font-family: 'icomoon';
+}
+
+.lab_hd a:hover,
+.job_hd a:hover,
+.course_hd a:hover {
+    color: #ff7901;
+}
+
+.job_hd h4,
+.job_hd i,
+.course_hd h4,
+.course_hd i {
+    float: left;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #888888;
+}
+
+.job_bd,
+.course_bd,
+.work_bd,
+.teacher_bd,
+.brand_bd {
+    margin-top: 15px;
+}
+
+
+/* 交互实验室模块开始 */
+
+.lab_bd {
+    position: relative;
+}
+
+
+/* 集体声明 */
+
+.lightning {
+    position: absolute;
+    width: 202px;
+    height: 112px;
+    background: transparent;
+}
+
+.first {
+    top: 38px;
+    left: 23px;
+}
+
+.second {
+    top: 119px;
+    left: 148px;
+}
+
+.third {
+    top: 144px;
+    left: 324px;
+}
+
+.fourth {
+    top: 133px;
+    right: 293px;
+}
+
+.fifth {
+    top: 56px;
+    right: 145px;
+}
+
+.sixth {
+    top: 122px;
+    right: -23px;
+}
+
+.first::before {
+    content: '测试';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 50px;
+    height: 40px;
+    color: #f8335c;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    background: transparent url(../images/pink.png) no-repeat center;
+}
+
+.second::before,
+.third::before,
+.fourth::before,
+.fifth::before,
+.sixth::before {
+    content: '流畅';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 50px;
+    height: 40px;
+    color: #4ad1c5;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    background: transparent url(../images/green.png) no-repeat center;
+}
+
+.lightning p {
+    position: absolute;
+    top: 27px;
+    left: 88px;
+    font-size: 14px;
+    color: #8b8b8b;
+}
+
+.lightning:hover::after {
+    content: '抢先体验';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 202px;
+    height: 112px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 15px;
+    color: #fff;
+    background: transparent url(../images/lightning1.png) no-repeat center;
+}
+
+
+/* 交互实验室模块结束 */
+
+
+/* 职业体系模块开始 */
+
+.job_hd i,
+.course_hd i {
+    margin: 0 15px;
+}
+
+.job_hd a::after {
+    content: '\e929';
+    font-family: 'icomoon';
+}
+
+.job_bd ul li {
+    float: left;
+    width: 270px;
+    height: 290px;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+}
+
+.job_bd ul li:nth-child(-n+3) {
+    margin-right: 40px;
+}
+
+.job_bd img {
+    width: 250px;
+    margin: 0 10px;
+}
+
+.job_bd p {
+    font-size: 16px;
+    color: #888888;
+    text-align: center;
+    margin: 13px 0 23px 0;
+}
+
+.job_bd a {
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+    height: 40px;
+    font-size: 16px;
+    color: #fe801f;
+    border: 1px solid #fe801f;
+    text-align: center;
+    line-height: 40px;
+}
+
+.job_bd a:hover {
+    color: #fdfcfd;
+    background-color: #fe801f;
+}
+
+
+/* 职业体系模块结束 */
+
+
+/* 热销课程模块开始 */
+
+.course_hd a::after {
+    content: '\e927';
+    font-family: 'icomoon';
+}
+
+.course_bd ul li {
+    float: left;
+    width: 270px;
+}
+
+.course_bd ul li:nth-child(-n+3) {
+    margin-right: 40px;
+}
+
+.course_bd img {
+    width: 270px;
+}
+
+.course_bd h5 {
+    font-size: 14px;
+    color: #2b2b2b;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.course_bd span {
+    font-size: 14px;
+    color: #fe801f;
+}
+
+.course_bd em {
+    float: right;
+    color: #8a8a8a;
+}
+
+.course_bd em::before {
+    content: '\e931';
+    font-family: 'icomoon';
+}
+
+
+/* 热销课程模块结束 */
+
+
+/* 就业班模块开始 */
+
+.work_bd ul li {
+    float: left;
+    width: 580px;
+}
+
+.work_bd ul li:first-child {
+    margin-right: 40px;
+}
+
+.work_bd a {
+    position: relative;
+    width: 580px;
+    height: 180px;
+}
+
+.work_bd img {
+    width: 580px;
+    height: 180px;
+}
+
+
+/* 鼠标经过有遮罩效果，但是没有实现中间文字有大小背景色的效果 */
+
+.work_bd a::before {
+    content: '';
+    display: none;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.work_bd a:hover::before {
+    display: block;
+}
+
+.work_bd a:hover::after {
+    content: '查看详情';
+    /* display: block; */
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -60px;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 13px;
+    background-color: #fe801f;
+    color: #fff;
+}
+
+
+/* 小图标 */
+
+.icon {
+    float: left;
+    width: 105px;
+    height: 85px;
+    background-color: skyblue;
+    margin: 18px 20px 0 20px;
+}
+
+.icon p {
+    font-size: 13px;
+    color: #898989;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.icon_1 {
+    background: url(../images/icon_1.png) no-repeat top center;
+}
+
+.icon_2 {
+    background: url(../images/icon_2.png) no-repeat top center;
+}
+
+.icon_3 {
+    background: url(../images/icon_3.png) no-repeat top center;
+}
+
+.icon_4 {
+    background: url(../images/icon_4.png) no-repeat top center;
+}
+
+.icon_5 {
+    background: url(../images/icon_5.png) no-repeat top center;
+}
+
+.icon_6 {
+    background: url(../images/icon_6.png) no-repeat top center;
+}
+
+.icon_7 {
+    background: url(../images/icon_7.png) no-repeat top center;
+}
+
+.icon_8 {
+    background: url(../images/icon_8.png) no-repeat top center;
+}
+
+
+/* 就业班模块结束 */
+
+
+/* 推荐讲师模块开始 */
+
+.teacher_bd ul li {
+    float: left;
+    width: 240px;
+    height: 260px;
+}
+
+.teacher_bd ul li:nth-child(-n+3) {
+    margin: 10px 38px 0 20px;
+}
+
+.teacher_bd ul li:last-child {
+    margin: 10px 0 0 20px;
+}
+
+.name {
+    position: relative;
+    height: 105px;
+    border-bottom: 1px solid #ededed;
+}
+
+.pic {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.add {
+    position: absolute;
+    top: 65px;
+    left: 55px;
+    width: 16px;
+    height: 16px;
+}
+
+.name h3 {
+    padding: 20px 0 7px 0;
+    color: #212121;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+/* 强制一行显示,多余的用...代替 */
+
+.name p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #949494;
+    font-size: 12px;
+}
+
+.teacher_bd h4 {
+    color: #888888;
+    margin: 30px 0 40px 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pingfen span {
+    color: #888888;
+    font-size: 14px;
+    vertical-align: middle;
+    padding-right: 3px;
+}
+
+.pingfen img {
+    padding: 0 2px;
+}
+
+.guanzhu {
+    float: right;
+}
+
+
+/* 老师模块结束 */
+
+
+/* 旗下品牌模块开始 */
+
+.brand_bd ul li {
+    float: left;
+    width: 162px;
+    height: 74px;
+    margin: 15px 0 150px 0;
+}
+
+.brand_bd ul li:nth-child(-n+5) {
+    margin-right: 45px;
+}
+
+.brand_bd img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 旗下品牌模块结束 */
+
+
+/* 尾部模块开始 */
+
+footer {
+    height: 250px;
+    background-color: #2c3034;
+}
+
+footer .up {
+    position: relative;
+    height: 125px;
+    border-bottom: 1px solid #4d525a;
+    background: url(../images/wbIcon.png) no-repeat calc(50% - 30px) 36px, url(../images/wxIcon.png) no-repeat calc(50% + 30px) 36px;
+}
+
+.up ul {
+    position: absolute;
+    top: 88px;
+    left: 50%;
+    margin-left: -502px;
+}
+
+.up ul li {
+    float: left;
+    margin: 0 28px;
+}
+
+.up ul li a {
+    color: #fff;
+    font-size: 13px;
+}
+
+.down p {
+    text-align: center;
+    font-size: 13px;
+    color: #97989c;
+    line-height: 30px;
+}
+
+.down p:first-child {
+    margin-top: 10px;
+}
+
+
+/* 尾部模块结束 */
+
+
+/* 电梯按钮模块开始 */
+
+.elev {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 60px;
+    background-color: #fff;
+    border: 1px solid #eeeeee;
+}
+
+.elev ul li a {
+    display: block;
+    width: 40px;
+    height: 60px;
+    font-size: 14px;
+    color: #888888;
+    border-bottom: 1px solid #eeeeee;
+    text-align: center;
+    margin: 15px 0 0 10px;
+}
+
+.elev ul li a:hover {
+    color: #fe801f;
+}
+
+
+/* 电梯按钮模块结束 */
